@@ -13,39 +13,27 @@ knitr::opts_chunk$set(
   fig.retina = 3,
   out.width = "100%"
 )
-Sys.setenv(PATH = paste("/opt/miniconda3/bin", Sys.getenv("PATH"),sep=":"))
 ```
 
-# ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />  
+# ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
 [![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-univserse](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.github.io/ggsegSchaefer/)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
-This package contains dataset for plotting the Schaefer cortical atlas (version 0.17.1) ggseg and ggseg3d. Now includes sets for the 17 and 7 network atlas, for parcellations 100:1000. 
+This package contains the Schaefer cortical atlas (version 0.17.1) for the
+ggseg ecosystem. Includes both the 7-network and 17-network parcellations at
+resolutions from 100 to 1000 parcels.
 
 ## Installation
 
-The best experience installing ggsegSchaefer is through the [ggseg r-universe](https://ggseg.r-universe.dev/ui#builds):
+You can install ggsegSchaefer from [GitHub](https://github.com/) with:
 
-```{r, eval = FALSE}
-# Enable this universe
-options(repos = c(
-    ggseg = 'https://ggseg.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
-
-# Install some packages
-install.packages('ggsegSchaefer')
-```
-
-
-You can install the released version of ggsegSchaefer from [GitHub](https://github.com/) with:
-
-``` r
+```r
 # install.packages("remotes")
-remotes::install_github("LCBC-UiO/ggsegSchaefer")
+remotes::install_github("ggseg/ggsegSchaefer")
 ```
 
 ## Example
@@ -53,53 +41,44 @@ remotes::install_github("LCBC-UiO/ggsegSchaefer")
 ```{r}
 library(ggsegSchaefer)
 library(ggseg)
-library(ggseg3d)
 library(ggplot2)
-library(dplyr)
 ```
 
-```{r, include=FALSE}
-dt <- as.data.frame(data(package="ggsegSchaefer")$results, stringsAsFactors = FALSE)
+### 2D atlas
+
+```{r schaefer7-2d}
+ggplot() +
+  geom_brain(
+    atlas = schaefer7_400,
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = schaefer7_400$palette, na.value = "grey") +
+  theme_void() +
+  ggtitle("Schaefer 7-Network 400-Parcel Atlas")
 ```
 
-### ggseg 2d atlases
-
-```{r, fig.height=20, echo = FALSE}
-library(patchwork)
-gg <- dt %>% 
-  filter(!grepl("_3d$", Item)) %>% 
-  pull(Item) %>% 
-  lapply(function(x) plot(get(x), show.legend = FALSE) + ggtitle(x))
-wrap_plots(gg, ncol = 1) &
-  theme_brain2()
+```{r schaefer17-2d}
+ggplot() +
+  geom_brain(
+    atlas = schaefer17_400,
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = schaefer17_400$palette, na.value = "grey") +
+  theme_void() +
+  ggtitle("Schaefer 17-Network 400-Parcel Atlas")
 ```
 
-### ggseg 3d atlases
+### 3D atlas
 
-```{r "noneval", eval=FALSE}
-ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
+```{r, eval=FALSE}
+library(ggseg3d)
+
+ggseg3d(atlas = schaefer7_400) |>
   pan_camera("right lateral")
-```
-
-```{r "orca", include=FALSE}
-save3d <- function(data){
-  p <- ggseg3d(atlas = data, surface = "inflated") %>%
-    pan_camera("right lateral") %>%
-    plotly::add_annotations( text=sprintf("%s\nScreen capture", data),
-                    legendtitle=TRUE, showarrow=FALSE,
-                    font = list(color = "#000000b4",
-                                family = 'sans serif',
-                                size = 50))
-  plotly::orca(p, sprintf("man/figures/README-%s-plot.png", data))
-}
-dt %>% 
-  filter(grepl("_3d$", Item)) %>% 
-  pull(Item) %>% 
-  lapply(save3d)
-```
-
-```{r echo=FALSE, out.width="30%"}
-knitr::include_graphics(list.files("man/figures/", "schaefer", full.names = TRUE))
 ```
 
 Please note that the 'ggsegSchaefer' project is released with a
