@@ -13,8 +13,8 @@ Schaefer cortical atlas for the 'ggseg' ecosystem. Provides unified 'ggseg_atlas
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ggseg/ggsegSchaefer}
-  \item Report bugs at \url{https://github.com/ggseg/ggsegSchaefer/issues}
+  \item \url{https://github.com/ggsegverse/ggsegSchaefer}
+  \item Report bugs at \url{https://github.com/ggsegverse/ggsegSchaefer/issues}
 }
 
 }

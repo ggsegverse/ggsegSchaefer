@@ -5,9 +5,9 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
 [![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-univserse](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.github.io/ggsegSchaefer/)
+[![r-univserse](https://ggsegverse.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
 This package contains dataset for plotting the Schaefer cortical atlas
@@ -17,12 +17,12 @@ network atlas, for parcellations 100:1000.
 ## Installation
 
 The best experience installing ggsegSchaefer is through the [ggseg
-r-universe](https://ggseg.r-universe.dev/ui#builds):
+r-universe](https://ggsegverse.r-universe.dev/ui#builds):
 
 ``` r
 # Enable this universe
 options(repos = c(
-    ggseg = 'https://ggseg.r-universe.dev',
+    ggsegverse = 'https://ggsegverse.r-universe.dev',
     CRAN = 'https://cloud.r-project.org'))
 
 # Install some packages

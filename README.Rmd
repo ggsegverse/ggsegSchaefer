@@ -18,9 +18,9 @@ knitr::opts_chunk$set(
 # ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
 [![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.github.io/ggsegSchaefer/)
+[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
 This package contains the Schaefer cortical atlas (version 0.17.1) for the
@@ -33,7 +33,7 @@ You can install ggsegSchaefer from [GitHub](https://github.com/) with:
 
 ```r
 # install.packages("remotes")
-remotes::install_github("ggseg/ggsegSchaefer")
+remotes::install_github("ggsegverse/ggsegSchaefer")
 ```
 
 ## Example

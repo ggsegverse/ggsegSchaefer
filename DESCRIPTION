@@ -33,11 +33,12 @@ Suggests:
     testthat (>= 3.0.0),
     vdiffr
 Remotes:
-    ggseg/ggseg,
-    ggseg/ggseg3d,
-    ggseg/ggseg.formats
-URL: https://github.com/ggseg/ggsegSchaefer
-BugReports: https://github.com/ggseg/ggsegSchaefer/issues
+    ggsegverse/ggseg,
+    ggsegverse/ggseg3d,
+    ggsegverse/ggseg.formats
+URL: https://github.com/ggsegverse/ggsegSchaefer
+BugReports: https://github.com/ggsegverse/ggsegSchaefer/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Config/testthat/edition: 3
+Config/Needs/website: ggsegverse/ggseg.docs
