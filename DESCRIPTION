@@ -19,8 +19,6 @@ Description: Schaefer cortical atlas for the 'ggseg' ecosystem. Provides
     17-network parcellations at resolutions from 100 to 1000 parcels.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
-LazyDataCompression: xz
 Depends:
     R (>= 3.5),
     ggseg.formats
