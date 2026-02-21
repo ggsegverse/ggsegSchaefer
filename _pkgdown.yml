@@ -14,4 +14,4 @@ reference:
   - title: Atlases
     desc: Brain atlases bundled in this package
     contents:
-      - has_keyword("datasets")
+      - has_concept("ggseg_atlases")
