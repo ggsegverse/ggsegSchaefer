@@ -15,6 +15,7 @@
 #'   \doi{10.1093/cercor/bhx179}
 #'
 #' @return A [ggseg.formats::ggseg_atlas] object (cortical).
+#' @import ggseg.formats
 #' @export
 #' @examples
 #' schaefer7_100()
