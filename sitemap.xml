@@ -1,36 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/404.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/index.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/reference/schaefer17.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/reference/schaefer17_3d.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/reference/schaefer7.html</loc>
-  </url>
-  <url>
-    <loc>https://lcbc-uio.github.io/ggsegSchaefer/reference/schaefer7_3d.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/404.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/LICENSE-text.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/LICENSE.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/authors.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/copilot-instructions.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/news/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/ggsegSchaefer-package.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/index.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_100.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_1000.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_200.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_300.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_400.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_500.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_600.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_700.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_800.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_900.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_100.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_1000.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_200.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_300.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_400.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_500.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_600.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_700.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_800.html</loc></url>
+<url><loc>https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_900.html</loc></url>
 </urlset>
+

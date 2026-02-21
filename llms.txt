@@ -1,0 +1,133 @@
+# ggsegSchaefer
+
+This package contains dataset for plotting the Schaefer cortical atlas
+(version 0.17.1) ggseg and ggseg3d. Now includes sets for the 17 and 7
+network atlas, for parcellations 100:1000.
+
+## Installation
+
+The best experience installing ggsegSchaefer is through the [ggseg
+r-universe](https://ggsegverse.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    ggsegverse = 'https://ggsegverse.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+# Install some packages
+install.packages('ggsegSchaefer')
+```
+
+You can install the released version of ggsegSchaefer from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("LCBC-UiO/ggsegSchaefer")
+```
+
+## Example
+
+``` r
+library(ggsegSchaefer)
+library(ggseg)
+library(ggseg3d)
+library(ggplot2)
+library(dplyr)
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+```
+
+### ggseg 2d atlases
+
+![](reference/figures/README-unnamed-chunk-5-1.png)
+
+### ggseg 3d atlases
+
+``` r
+ggseg3d(atlas = schaefer7_400_3d, surface = "inflated") %>% 
+  pan_camera("right lateral")
+```
+
+![](reference/figures//README-schaefer17_100_3d-plot.png)![](reference/figures//README-schaefer17_1000_3d-plot.png)![](reference/figures//README-schaefer17_200_3d-plot.png)![](reference/figures//README-schaefer17_300_3d-plot.png)![](reference/figures//README-schaefer17_400_3d-plot.png)![](reference/figures//README-schaefer17_500_3d-plot.png)![](reference/figures//README-schaefer17_600_3d-plot.png)![](reference/figures//README-schaefer17_700_3d-plot.png)![](reference/figures//README-schaefer17_800_3d-plot.png)![](reference/figures//README-schaefer17_900_3d-plot.png)![](reference/figures//README-schaefer7_100_3d-plot.png)![](reference/figures//README-schaefer7_1000_3d-plot.png)![](reference/figures//README-schaefer7_200_3d-plot.png)![](reference/figures//README-schaefer7_300_3d-plot.png)![](reference/figures//README-schaefer7_400_3d-plot.png)![](reference/figures//README-schaefer7_500_3d-plot.png)![](reference/figures//README-schaefer7_600_3d-plot.png)![](reference/figures//README-schaefer7_700_3d-plot.png)![](reference/figures//README-schaefer7_800_3d-plot.png)![](reference/figures//README-schaefer7_900_3d-plot.png)
+
+## Source annotation files
+
+The FreeSurfer annotation files in `data-raw/` were downloaded from the
+[ThomasYeoLab/CBIG](https://github.com/ThomasYeoLab/CBIG) GitHub
+repository:
+
+    stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/
+      Parcellations/FreeSurfer5.3/fsaverage/label/
+
+Files follow the pattern
+`{lh|rh}.Schaefer2018_{N}Parcels_{7|17}Networks_order.annot` for N =
+100, 200, …, 1000. These are in fsaverage space (163k vertices).
+
+License: MIT (per the CBIG repository).
+
+Reference: Schaefer A, Kong R, Gordon EM, Laumann TO, Zuo XN, Holmes AJ,
+Eickhoff SB, Yeo BTT (2018). Local-Global Parcellation of the Human
+Cerebral Cortex from Intrinsic Functional Connectivity MRI. *Cerebral
+Cortex*, 28(9), 3095-3114.
+<doi:%5B10.1093/cercor/bhx179>\](<https://doi.org/10.1093/cercor/bhx179>)
+
+Please note that the ‘ggsegSchaefer’ project is released with a
+[Contributor Code of
+Conduct](https://ggsegverse.github.io/ggsegSchaefer/CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
+
+# Package index
+
+## Atlases
+
+Brain atlases bundled in this package
+
+- [`schaefer17_100()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_100.md)
+  : Schaefer 17-Network 100-Parcel Atlas
+- [`schaefer17_1000()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_1000.md)
+  : Schaefer 17-Network 1000-Parcel Atlas
+- [`schaefer17_200()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_200.md)
+  : Schaefer 17-Network 200-Parcel Atlas
+- [`schaefer17_300()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_300.md)
+  : Schaefer 17-Network 300-Parcel Atlas
+- [`schaefer17_400()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_400.md)
+  : Schaefer 17-Network 400-Parcel Atlas
+- [`schaefer17_500()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_500.md)
+  : Schaefer 17-Network 500-Parcel Atlas
+- [`schaefer17_600()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_600.md)
+  : Schaefer 17-Network 600-Parcel Atlas
+- [`schaefer17_700()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_700.md)
+  : Schaefer 17-Network 700-Parcel Atlas
+- [`schaefer17_800()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_800.md)
+  : Schaefer 17-Network 800-Parcel Atlas
+- [`schaefer17_900()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_900.md)
+  : Schaefer 17-Network 900-Parcel Atlas
+- [`schaefer7_100()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_100.md)
+  : Schaefer 7-Network 100-Parcel Atlas
+- [`schaefer7_1000()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_1000.md)
+  : Schaefer 7-Network 1000-Parcel Atlas
+- [`schaefer7_200()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_200.md)
+  : Schaefer 7-Network 200-Parcel Atlas
+- [`schaefer7_300()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_300.md)
+  : Schaefer 7-Network 300-Parcel Atlas
+- [`schaefer7_400()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_400.md)
+  : Schaefer 7-Network 400-Parcel Atlas
+- [`schaefer7_500()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_500.md)
+  : Schaefer 7-Network 500-Parcel Atlas
+- [`schaefer7_600()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_600.md)
+  : Schaefer 7-Network 600-Parcel Atlas
+- [`schaefer7_700()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_700.md)
+  : Schaefer 7-Network 700-Parcel Atlas
+- [`schaefer7_800()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_800.md)
+  : Schaefer 7-Network 800-Parcel Atlas
+- [`schaefer7_900()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_900.md)
+  : Schaefer 7-Network 900-Parcel Atlas
+
