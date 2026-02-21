@@ -1,5 +1,17 @@
-destination: docs
-url: https://lcbc-uio.github.io/ggsegSchaefer/
+url: https://ggsegverse.github.io/ggsegSchaefer/
+
 template:
-  params:
-    bootswatch: cerulean
+  package: ggseg.docs
+
+navbar:
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/ggsegverse/ggsegSchaefer
+      aria-label: GitHub
+
+reference:
+  - title: Atlases
+    desc: Brain atlases bundled in this package
+    contents:
+      - has_concept("ggseg_atlases")
