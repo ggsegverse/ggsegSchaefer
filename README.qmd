@@ -105,7 +105,7 @@ ggseg3d(atlas = schaefer7_400()) |>
 ```{r}
 #| label: 3d-snapshot
 #| include: false
-#| eval: !expr file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))
+#| eval: !expr (file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))) && !nzchar(Sys.getenv("CI"))
 library(ggseg3d)
 
 ggseg3d(atlas = schaefer7_400()) |>
