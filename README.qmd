@@ -1,26 +1,28 @@
 ---
-output: github_document
+format: gfm
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.qmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| label: setup
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   fig.width = 6,
-  fig.retina = 3,
-  out.width = "100%"
+  out.width = "100%",
+  fig.retina = 3
 )
 ```
 
 # ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
+[![R-CMD-check](https://github.com/ggseg/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggseg/ggsegSchaefer/actions)
 [![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.github.io/ggsegSchaefer/)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
 This package contains the Schaefer cortical atlas (version 0.17.1) for the
@@ -29,16 +31,31 @@ resolutions from 100 to 1000 parcels.
 
 ## Installation
 
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r}
+#| label: install-r-universe
+#| eval: false
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegSchaefer")
+```
+
 You can install ggsegSchaefer from [GitHub](https://github.com/) with:
 
 ```r
 # install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegSchaefer")
+remotes::install_github("ggseg/ggsegSchaefer")
 ```
 
 ## Example
 
 ```{r}
+#| label: load
 library(ggsegSchaefer)
 library(ggseg)
 library(ggplot2)
@@ -46,7 +63,8 @@ library(ggplot2)
 
 ### 2D atlas
 
-```{r schaefer7-2d}
+```{r}
+#| label: schaefer7-2d
 ggplot() +
   geom_brain(
     atlas = schaefer7_400(),
@@ -59,7 +77,8 @@ ggplot() +
   ggtitle("Schaefer 7-Network 400-Parcel Atlas")
 ```
 
-```{r schaefer17-2d}
+```{r}
+#| label: schaefer17-2d
 ggplot() +
   geom_brain(
     atlas = schaefer17_400(),
@@ -74,11 +93,31 @@ ggplot() +
 
 ### 3D atlas
 
-```{r, eval=FALSE}
+```{r}
+#| label: 3d-example
+#| eval: false
 library(ggseg3d)
 
 ggseg3d(atlas = schaefer7_400()) |>
   pan_camera("right lateral")
+```
+
+```{r}
+#| label: 3d-snapshot
+#| include: false
+#| eval: !expr file.exists(Sys.which("chrome")) || file.exists(Sys.which("chromium"))
+library(ggseg3d)
+
+ggseg3d(atlas = schaefer7_400()) |>
+  pan_camera("right lateral") |>
+  snapshot_brain("man/figures/README-3d-plot.png")
+```
+
+```{r}
+#| label: 3d-include
+#| echo: false
+#| eval: !expr file.exists("man/figures/README-3d-plot.png")
+knitr::include_graphics("man/figures/README-3d-plot.png")
 ```
 
 Please note that the 'ggsegSchaefer' project is released with a
