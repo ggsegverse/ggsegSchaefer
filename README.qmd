@@ -1,10 +1,11 @@
 ---
-output: github_document
+format: gfm
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -20,7 +21,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
 [![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.github.io/ggsegSchaefer/)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
 This package contains the Schaefer cortical atlas (version 0.17.1) for the
@@ -39,6 +40,7 @@ remotes::install_github("ggsegverse/ggsegSchaefer")
 ## Example
 
 ```{r}
+#| label: chunk-2
 library(ggsegSchaefer)
 library(ggseg)
 library(ggplot2)
@@ -46,7 +48,8 @@ library(ggplot2)
 
 ### 2D atlas
 
-```{r schaefer7-2d}
+```{r}
+#| label: schaefer7-2d
 ggplot() +
   geom_brain(
     atlas = schaefer7_400(),
@@ -59,7 +62,8 @@ ggplot() +
   ggtitle("Schaefer 7-Network 400-Parcel Atlas")
 ```
 
-```{r schaefer17-2d}
+```{r}
+#| label: schaefer17-2d
 ggplot() +
   geom_brain(
     atlas = schaefer17_400(),
@@ -74,7 +78,8 @@ ggplot() +
 
 ### 3D atlas
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false
 library(ggseg3d)
 
 ggseg3d(atlas = schaefer7_400()) |>
