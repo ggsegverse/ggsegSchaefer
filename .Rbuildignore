@@ -9,3 +9,4 @@
 pkgdown
 docs
 ^.*\.zip$
+^README\.qmd$
