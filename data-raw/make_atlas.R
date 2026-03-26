@@ -1,7 +1,8 @@
 # Create Schaefer Cortical Atlases
 #
 # Recreates schaefer7 and schaefer17 cortical atlases (100-1000 parcels)
-# from the Schaefer et al. (2018) annotation files using ggseg.extra.
+# from the Schaefer et al. (2018) annotation files using ggseg.extra
+# vertex projection pipeline.
 #
 # Annotation files downloaded from ThomasYeoLab/CBIG GitHub:
 # https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/
@@ -15,23 +16,20 @@
 #
 # Requirements:
 #   - FreeSurfer installed with fsaverage subject
-#   - ggseg.extra package
-#   - ggseg.formats package
+#   - ggseg.extra (>= 2.0.0.9000)
+#   - ggseg.formats
 #
 # Run with: Rscript data-raw/make_atlas.R
 
-library(dplyr)
 library(ggseg.extra)
 library(ggseg.formats)
 
-options(freesurfer.verbose = FALSE)
+Sys.setenv(FREESURFER_HOME = "/Applications/freesurfer/7.4.1")
 
 parcels <- c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000)
 networks <- c("7Networks", "17Networks")
 
 # -- Resample all annotations fsaverage -> fsaverage5 -------------------------
-cli::cli_h1("Resampling annotations to fsaverage5")
-
 resample_dir <- here::here("data-raw", "fsaverage5")
 dir.create(resample_dir, showWarnings = FALSE, recursive = TRUE)
 
@@ -87,34 +85,7 @@ for (net in networks) {
 
 Sys.setenv(SUBJECTS_DIR = old_sd)
 
-cli::cli_alert_success("All annotations resampled")
-
 # -- Build each atlas variant -------------------------------------------------
-
-build_one_atlas <- function(atlas_name, annot_files, output_dir) {
-  library(ggseg.extra)
-  library(ggseg.formats)
-  options(freesurfer.verbose = FALSE)
-  options(chromote.timeout = 120)
-  future::plan(future::sequential)
-  progressr::handlers("cli")
-
-  atlas_raw <- progressr::with_progress(create_cortical_from_annotation(
-    input_annot = annot_files,
-    atlas_name = atlas_name,
-    output_dir = output_dir,
-    tolerance = 1,
-    smoothness = 2,
-    skip_existing = TRUE,
-    cleanup = FALSE
-  ))
-
-  atlas_raw <- atlas_raw |>
-    atlas_region_contextual("Background", "label")
-
-  atlas_raw
-}
-
 all_atlases <- list()
 
 for (net in networks) {
@@ -129,54 +100,34 @@ for (net in networks) {
       c(paste0("lh.", annot_name, ".annot"), paste0("rh.", annot_name, ".annot"))
     )
 
-    if (!all(file.exists(annot_files))) {
-      cli::cli_warn("Skipping {atlas_name}: resampled annotations not found")
-      next
-    }
+    if (!all(file.exists(annot_files))) next
 
-    cli::cli_h1("Creating {atlas_name} cortical atlas")
-
-    atlas_raw <- tryCatch(
-      callr::r(
-        build_one_atlas,
-        args = list(
-          atlas_name = atlas_name,
-          annot_files = annot_files,
-          output_dir = file.path("data-raw", atlas_name)
-        ),
-        show = TRUE
-      ),
-      error = function(e) {
-        cli::cli_warn("Failed {atlas_name}: {conditionMessage(e)}")
-        NULL
-      }
-    )
-
-    if (is.null(atlas_raw)) next
+    atlas_raw <- create_cortical_from_annotation(
+      input_annot = annot_files,
+      atlas_name = atlas_name,
+      output_dir = file.path("data-raw", atlas_name),
+      tolerance = 0,
+      skip_existing = TRUE,
+      cleanup = FALSE
+    ) |>
+      atlas_region_contextual("Background", "label")
 
     assign(atlas_name, atlas_raw)
     all_atlases[[atlas_name]] <- atlas_raw
 
-    cli::cli_alert_success(
-      "{atlas_name}: {nrow(atlas_raw$core)} regions"
-    )
+    print(atlas_raw)
+    plot(atlas_raw)
   }
 }
 
-# -- Save all atlases ----------------------------------------------------------
-brain_pals <- list()
-
+# -- Save all atlases as internal data -----------------------------------------
+sysdata_env <- new.env(parent = emptyenv())
 for (nm in names(all_atlases)) {
-  obj <- all_atlases[[nm]]
-  brain_pals[[obj$atlas]] <- obj$palette
-  assign(nm, obj)
-  save(
-    list = nm,
-    file = here::here("data", paste0(nm, ".rda")),
-    compress = "xz"
-  )
+  sysdata_env[[paste0(".", nm)]] <- all_atlases[[nm]]
 }
-
-save(brain_pals, file = here::here("R/sysdata.rda"), compress = "xz")
-
-cli::cli_alert_success("Saved {length(all_atlases)} atlas objects")
+save(
+  list = ls(sysdata_env, all.names = TRUE),
+  envir = sysdata_env,
+  file = here::here("R", "sysdata.rda"),
+  compress = "xz"
+)
