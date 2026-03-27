@@ -5,6 +5,10 @@ Schaefer Atlas for the ggsegverse Ecosystem.
 ## Installation
 
 ``` r
+# From r-universe
+install.packages("ggsegSchaefer", repos = "https://ggsegverse.r-universe.dev")
+
+# From GitHub
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegSchaefer")
 ```
