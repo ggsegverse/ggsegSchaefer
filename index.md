@@ -1,68 +1,65 @@
 # ggsegSchaefer
 
-This package contains the Schaefer cortical atlas (version 0.17.1) for
-the ggseg ecosystem. Includes both the 7-network and 17-network
-parcellations at resolutions from 100 to 1000 parcels.
+Schaefer Atlas for the ggsegverse Ecosystem.
 
 ## Installation
-
-You can install ggsegSchaefer from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegSchaefer")
 ```
 
-## Example
+## Usage
 
 ``` r
 library(ggsegSchaefer)
 library(ggseg)
-library(ggplot2)
+
+plot(schaefer7_400()) +
+  theme_brain()
 ```
 
-### 2D atlas
+## Atlases
 
-``` r
-ggplot() +
-  geom_brain(
-    atlas = schaefer7_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer7_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 7-Network 400-Parcel Atlas")
-```
+Local-global parcellation of the human cerebral cortex (Schaefer et al.,
+2018) in 7-network and 17-network variants at 10 resolutions (100–1000
+parcels).
 
-![](reference/figures/README-schaefer7-2d-1.png)
+### Available variants
 
-``` r
-ggplot() +
-  geom_brain(
-    atlas = schaefer17_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer17_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 17-Network 400-Parcel Atlas")
-```
+| Parcels | 7 Networks                                                                                   | 17 Networks                                                                                    |
+|--------:|:---------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+|     100 | [`schaefer7_100()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_100.md)   | [`schaefer17_100()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_100.md)   |
+|     200 | [`schaefer7_200()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_200.md)   | [`schaefer17_200()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_200.md)   |
+|     300 | [`schaefer7_300()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_300.md)   | [`schaefer17_300()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_300.md)   |
+|     400 | [`schaefer7_400()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_400.md)   | [`schaefer17_400()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_400.md)   |
+|     500 | [`schaefer7_500()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_500.md)   | [`schaefer17_500()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_500.md)   |
+|     600 | [`schaefer7_600()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_600.md)   | [`schaefer17_600()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_600.md)   |
+|     700 | [`schaefer7_700()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_700.md)   | [`schaefer17_700()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_700.md)   |
+|     800 | [`schaefer7_800()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_800.md)   | [`schaefer17_800()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_800.md)   |
+|     900 | [`schaefer7_900()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_900.md)   | [`schaefer17_900()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_900.md)   |
+|    1000 | [`schaefer7_1000()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer7_1000.md) | [`schaefer17_1000()`](https://ggsegverse.github.io/ggsegSchaefer/reference/schaefer17_1000.md) |
 
-![](reference/figures/README-schaefer17-2d-1.png)
+### schaefer7_100
 
-### 3D atlas
+![schaefer7_100](reference/figures/schaefer7_100_snapshot.png)
 
-``` r
-library(ggseg3d)
+schaefer7_100
 
-ggseg3d(atlas = schaefer7_400()) |>
-  pan_camera("right lateral")
-```
+### schaefer7_1000
 
-Please note that the ‘ggsegSchaefer’ project is released with a
-[Contributor Code of
-Conduct](https://ggsegverse.github.io/ggsegSchaefer/CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+![schaefer7_1000](reference/figures/schaefer7_1000_snapshot.png)
+
+schaefer7_1000
+
+### schaefer17_100
+
+![schaefer17_100](reference/figures/schaefer17_100_snapshot.png)
+
+schaefer17_100
+
+### schaefer17_1000
+
+![schaefer17_1000](reference/figures/schaefer17_1000_snapshot.png)
+
+schaefer17_1000

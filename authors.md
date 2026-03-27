@@ -17,13 +17,13 @@ Source:
 [`DESCRIPTION`](https://github.com/ggsegverse/ggsegSchaefer/blob/main/DESCRIPTION)
 
 Mowinckel A, Vidal-Pineiro D (2026). *ggsegSchaefer: Schaefer Atlas for
-the 'ggseg' Ecosystem*. R package version 2.0.0,
+the 'ggsegverse' Ecosystem*. R package version 2.0.1,
 <https://github.com/ggsegverse/ggsegSchaefer>.
 
     @Manual{,
-      title = {ggsegSchaefer: Schaefer Atlas for the 'ggseg' Ecosystem},
+      title = {ggsegSchaefer: Schaefer Atlas for the 'ggsegverse' Ecosystem},
       author = {Athanasia Mo Mowinckel and Didac Vidal-Pineiro},
       year = {2026},
-      note = {R package version 2.0.0},
+      note = {R package version 2.0.1},
       url = {https://github.com/ggsegverse/ggsegSchaefer},
     }

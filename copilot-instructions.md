@@ -18,7 +18,7 @@ This package **depends** on `ggseg.formats` which provides the
 `ggseg_atlas` class. The atlas objects work with both
 [`ggseg::geom_brain()`](https://ggsegverse.github.io/ggseg/reference/ggbrain.html)
 (2D) and
-[`ggseg3d::ggseg3d()`](https://lcbc-uio.github.io/ggseg3d//reference/ggseg3d.html)
+[`ggseg3d::ggseg3d()`](https://ggsegverse.github.io/ggseg3d/reference/ggseg3d.html)
 (3D).
 
 ## Developer workflows
