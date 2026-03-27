@@ -1,79 +1,55 @@
+# ggsegSchaefer
 
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
-[![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer.png)](https://ggsegverse.github.io/ggsegSchaefer/)
-<!-- badges: end -->
-
-This package contains the Schaefer cortical atlas (version 0.17.1) for
-the ggseg ecosystem. Includes both the 7-network and 17-network
-parcellations at resolutions from 100 to 1000 parcels.
+Schaefer Atlas for the ggsegverse Ecosystem.
 
 ## Installation
-
-You can install ggsegSchaefer from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegSchaefer")
 ```
 
-## Example
+## Usage
 
 ``` r
 library(ggsegSchaefer)
 library(ggseg)
-library(ggplot2)
+
+plot(schaefer7_400()) +
+  theme_brain()
 ```
 
-### 2D atlas
+## Atlases
 
-``` r
-ggplot() +
-  geom_brain(
-    atlas = schaefer7_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer7_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 7-Network 400-Parcel Atlas")
-```
+Local-global parcellation of the human cerebral cortex (Schaefer et al., 2018) in 7-network and 17-network variants at 10 resolutions (100--1000 parcels).
 
-<img src="man/figures/README-schaefer7-2d-1.png" style="width:100.0%" />
+### Available variants
 
-``` r
-ggplot() +
-  geom_brain(
-    atlas = schaefer17_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer17_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 17-Network 400-Parcel Atlas")
-```
+| Parcels | 7 Networks | 17 Networks |
+|--------:|:-----------|:------------|
+| 100 | `schaefer7_100()` | `schaefer17_100()` |
+| 200 | `schaefer7_200()` | `schaefer17_200()` |
+| 300 | `schaefer7_300()` | `schaefer17_300()` |
+| 400 | `schaefer7_400()` | `schaefer17_400()` |
+| 500 | `schaefer7_500()` | `schaefer17_500()` |
+| 600 | `schaefer7_600()` | `schaefer17_600()` |
+| 700 | `schaefer7_700()` | `schaefer17_700()` |
+| 800 | `schaefer7_800()` | `schaefer17_800()` |
+| 900 | `schaefer7_900()` | `schaefer17_900()` |
+| 1000 | `schaefer7_1000()` | `schaefer17_1000()` |
 
-<img src="man/figures/README-schaefer17-2d-1.png"
-style="width:100.0%" />
+### schaefer7\_100
 
-### 3D atlas
+![schaefer7\_100](man/figures/schaefer7_100_snapshot.png)
 
-``` r
-library(ggseg3d)
+### schaefer7\_1000
 
-ggseg3d(atlas = schaefer7_400()) |>
-  pan_camera("right lateral")
-```
+![schaefer7\_1000](man/figures/schaefer7_1000_snapshot.png)
 
-Please note that the ‘ggsegSchaefer’ project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
-this project, you agree to abide by its terms.
+### schaefer17\_100
+
+![schaefer17\_100](man/figures/schaefer17_100_snapshot.png)
+
+### schaefer17\_1000
+
+![schaefer17\_1000](man/figures/schaefer17_1000_snapshot.png)
