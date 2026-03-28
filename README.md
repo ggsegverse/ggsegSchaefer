@@ -62,3 +62,10 @@ Local-global parcellation of the human cerebral cortex (Schaefer et al., 2018) i
 ### schaefer17\_1000
 
 ![schaefer17\_1000](man/figures/schaefer17_1000_snapshot.png)
+
+## Data source
+
+Annotation files from [ThomasYeoLab/CBIG](https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/FreeSurfer5.3/fsaverage/label) (fsaverage space, resampled to fsaverage5).
+
+- **Reference**: Schaefer et al. (2018) [doi:10.1093/cercor/bhx179](https://doi.org/10.1093/cercor/bhx179)
+- **Date obtained**: 2020-03-27
