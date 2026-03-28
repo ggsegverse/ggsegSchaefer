@@ -13,21 +13,10 @@ install.packages("ggsegSchaefer", repos = "https://ggsegverse.r-universe.dev")
 remotes::install_github("ggsegverse/ggsegSchaefer")
 ```
 
-## Usage
-
-``` r
-library(ggsegSchaefer)
-library(ggseg)
-
-plot(schaefer7_400()) +
-  theme_brain()
-```
-
 ## Atlases
 
 Local-global parcellation of the human cerebral cortex (Schaefer et al.,
-2018) in 7-network and 17-network variants at 10 resolutions (100–1000
-parcels).
+2018) in 7-network and 17-network variants at 10 resolutions.
 
 ### Available variants
 
@@ -46,33 +35,40 @@ parcels).
 
 ### schaefer7_100
 
-![schaefer7_100](reference/figures/schaefer7_100_snapshot.png)
+``` r
+library(ggsegSchaefer)
+plot(schaefer7_100())
+```
 
-schaefer7_100
+![](reference/figures/README-schaefer7_100-1.png)
 
 ### schaefer7_1000
 
-![schaefer7_1000](reference/figures/schaefer7_1000_snapshot.png)
+``` r
+plot(schaefer7_1000())
+```
 
-schaefer7_1000
+![](reference/figures/README-schaefer7_1000-1.png)
 
 ### schaefer17_100
 
-![schaefer17_100](reference/figures/schaefer17_100_snapshot.png)
+``` r
+plot(schaefer17_100())
+```
 
-schaefer17_100
+![](reference/figures/README-schaefer17_100-1.png)
 
 ### schaefer17_1000
 
-![schaefer17_1000](reference/figures/schaefer17_1000_snapshot.png)
+``` r
+plot(schaefer17_1000())
+```
 
-schaefer17_1000
-
-## Data source
+![](reference/figures/README-schaefer17_1000-1.png) \## Data source
 
 Annotation files from
-[ThomasYeoLab/CBIG](https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/FreeSurfer5.3/fsaverage/label)
-(fsaverage space, resampled to fsaverage5).
+[ThomasYeoLab/CBIG](https://github.com/ThomasYeoLab/CBIG) (fsaverage,
+resampled to fsaverage5).
 
 - **Reference**: Schaefer et al. (2018)
   [doi:10.1093/cercor/bhx179](https://doi.org/10.1093/cercor/bhx179)
