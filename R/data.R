@@ -8,6 +8,7 @@
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -30,6 +31,7 @@ schaefer7_100 <- function() .schaefer7_100
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -51,6 +53,7 @@ schaefer7_200 <- function() .schaefer7_200
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -72,6 +75,7 @@ schaefer7_300 <- function() .schaefer7_300
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -93,6 +97,7 @@ schaefer7_400 <- function() .schaefer7_400
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -114,6 +119,7 @@ schaefer7_500 <- function() .schaefer7_500
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -135,6 +141,7 @@ schaefer7_600 <- function() .schaefer7_600
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -156,6 +163,7 @@ schaefer7_700 <- function() .schaefer7_700
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -177,6 +185,7 @@ schaefer7_800 <- function() .schaefer7_800
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -198,6 +207,7 @@ schaefer7_900 <- function() .schaefer7_900
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -220,6 +230,7 @@ schaefer7_1000 <- function() .schaefer7_1000
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -241,6 +252,7 @@ schaefer17_100 <- function() .schaefer17_100
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -262,6 +274,7 @@ schaefer17_200 <- function() .schaefer17_200
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -283,6 +296,7 @@ schaefer17_300 <- function() .schaefer17_300
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -304,6 +318,7 @@ schaefer17_400 <- function() .schaefer17_400
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -325,6 +340,7 @@ schaefer17_500 <- function() .schaefer17_500
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -346,6 +362,7 @@ schaefer17_600 <- function() .schaefer17_600
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -367,6 +384,7 @@ schaefer17_700 <- function() .schaefer17_700
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -388,6 +406,7 @@ schaefer17_800 <- function() .schaefer17_800
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
@@ -409,6 +428,7 @@ schaefer17_900 <- function() .schaefer17_900
 #' 3D vertex indices for [ggseg3d::ggseg3d()].
 #'
 #' @family ggseg_atlases
+#' @family cortical_atlases
 #'
 #' @references Schaefer A, et al. (2018). "Local-Global Parcellation of the
 #'   Human Cerebral Cortex from Intrinsic Functional Connectivity MRI."
