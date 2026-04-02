@@ -1,0 +1,160 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "ggsegSchaefer",
+  "description": "Schaefer cortical atlas for the 'ggseg' ecosystem. Provides unified 'ggseg_atlas' objects with both 2D polygon geometry and 3D vertex indices, for use with 'ggseg' and 'ggseg3d'. Includes 7-network and 17-network parcellations at resolutions from 100 to 1000 parcels.",
+  "name": "ggsegSchaefer: Schaefer Atlas for the 'ggsegverse' Ecosystem",
+  "codeRepository": "https://github.com/ggsegverse/ggsegSchaefer",
+  "issueTracker": "https://github.com/ggsegverse/ggsegSchaefer/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "2.0.2",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Athanasia Mo",
+      "familyName": "Mowinckel",
+      "email": "a.m.mowinckel@psykologi.uio.no",
+      "@id": "https://orcid.org/0000-0002-5756-0223"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Didac",
+      "familyName": "Vidal-Pineiro",
+      "email": "d.v.pineiro@psykologi.uio.no",
+      "@id": "https://orcid.org/0000-0001-9997-9156"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Monica",
+      "familyName": "Thieu",
+      "email": "monica.thieu@columbia.edu",
+      "@id": "https://orcid.org/0000-0002-6376-0467"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Athanasia Mo",
+      "familyName": "Mowinckel",
+      "email": "a.m.mowinckel@psykologi.uio.no",
+      "@id": "https://orcid.org/0000-0002-5756-0223"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ggseg",
+      "name": "ggseg",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggseg"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ggseg3d",
+      "name": "ggseg3d",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggseg3d"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ggplot2",
+      "name": "ggplot2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "version": ">= 3.0.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "vdiffr",
+      "name": "vdiffr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=vdiffr"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.5"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "ggseg.formats",
+      "name": "ggseg.formats",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggseg.formats"
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "NAKB"
+}
