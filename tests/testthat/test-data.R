@@ -38,6 +38,7 @@ describe("schaefer7_400 atlas rendering", {
 
   it("renders with ggseg3d", {
     skip_if_not_installed("ggseg3d")
+    skip_if_not_installed("ggseg.meshes")
     p <- ggseg3d::ggseg3d(atlas = schaefer7_400())
     expect_s3_class(p, c("plotly", "htmlwidget"))
   })
