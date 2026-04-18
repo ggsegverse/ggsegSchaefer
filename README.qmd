@@ -2,54 +2,63 @@
 format: gfm
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.qmd. Please edit that file -->
 
 ```{r}
+#| label: setup
 #| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  fig.width = 6,
-  fig.retina = 3,
-  out.width = "100%"
+  out.width = "100%",
+  fig.width = 10,
+  fig.retina = 3
 )
 ```
 
-# ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
+# ggsegSchaefer <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
-[![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
-[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.github.io/ggsegSchaefer/)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer)](https://ggseg.r-universe.dev/ggsegSchaefer)
 <!-- badges: end -->
 
-This package contains the Schaefer cortical atlas (version 0.17.1) for the
-ggseg ecosystem. Includes both the 7-network and 17-network parcellations at
-resolutions from 100 to 1000 parcels.
+This package contains the Schaefer cortical atlas for the ggseg ecosystem.
+Includes both the 7-network and 17-network parcellations at resolutions from
+100 to 1000 parcels.
 
 ## Installation
 
-You can install ggsegSchaefer from [GitHub](https://github.com/) with:
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
+
+```{r}
+#| label: install-r-universe
+#| eval: false
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegSchaefer")
+```
+
+You can install this package from [GitHub](https://github.com/) with:
 
 ```r
-# install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegSchaefer")
+# install.packages("pak")
+pak::pak("ggsegverse/ggsegSchaefer")
 ```
 
-## Example
+## Schaefer 7-network (400 parcels)
 
 ```{r}
-#| label: chunk-2
-library(ggsegSchaefer)
+#| label: schaefer7-400
 library(ggseg)
+library(ggsegSchaefer)
 library(ggplot2)
-```
 
-### 2D atlas
-
-```{r}
-#| label: schaefer7-2d
 ggplot() +
   geom_brain(
     atlas = schaefer7_400(),
@@ -58,12 +67,13 @@ ggplot() +
     show.legend = FALSE
   ) +
   scale_fill_manual(values = schaefer7_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 7-Network 400-Parcel Atlas")
+  theme_void()
 ```
 
+## Schaefer 17-network (400 parcels)
+
 ```{r}
-#| label: schaefer17-2d
+#| label: schaefer17-400
 ggplot() +
   geom_brain(
     atlas = schaefer17_400(),
@@ -72,20 +82,11 @@ ggplot() +
     show.legend = FALSE
   ) +
   scale_fill_manual(values = schaefer17_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 17-Network 400-Parcel Atlas")
+  theme_void()
 ```
 
-### 3D atlas
+## Data source
 
-```{r}
-#| eval: false
-library(ggseg3d)
-
-ggseg3d(atlas = schaefer7_400()) |>
-  pan_camera("right lateral")
-```
-
-Please note that the 'ggsegSchaefer' project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
+Schaefer A, Kong R, Gordon EM, Laumann TO, Zuo XN, Holmes AJ, Eickhoff SB,
+& Yeo BTT (2018). Local-global parcellation of the human cerebral cortex from
+intrinsic functional connectivity MRI. *Cerebral Cortex*, 28(9), 3095-3114.
