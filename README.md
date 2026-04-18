@@ -1,85 +1,81 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegSchaefer
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+# ggsegSchaefer <img src='man/figures/logo.png' align="right" height="138.5" />
 
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml)
-[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.r-universe.dev/ggsegSchaefer)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer.png)](https://ggseg.r-universe.dev/ggsegSchaefer)
 <!-- badges: end -->
 
-Schaefer Atlas for the ggsegverse Ecosystem.
+This package contains the Schaefer cortical atlas for the ggseg
+ecosystem. Includes both the 7-network and 17-network parcellations at
+resolutions from 100 to 1000 parcels.
 
 ## Installation
 
-``` r
-# From r-universe
-install.packages("ggsegSchaefer", repos = "https://ggsegverse.r-universe.dev")
+We recommend installing the ggseg-atlases through the ggseg
+[r-universe](https://ggseg.r-universe.dev/ui#builds):
 
-# From GitHub
-# install.packages("remotes")
-remotes::install_github("ggsegverse/ggsegSchaefer")
+``` r
+options(repos = c(
+  ggseg = "https://ggseg.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+install.packages("ggsegSchaefer")
 ```
 
-## Atlases
-
-Local-global parcellation of the human cerebral cortex (Schaefer et al.,
-2018) in 7-network and 17-network variants at 10 resolutions.
-
-### Available variants
-
-| Parcels | 7 Networks         | 17 Networks         |
-|--------:|:-------------------|:--------------------|
-|     100 | `schaefer7_100()`  | `schaefer17_100()`  |
-|     200 | `schaefer7_200()`  | `schaefer17_200()`  |
-|     300 | `schaefer7_300()`  | `schaefer17_300()`  |
-|     400 | `schaefer7_400()`  | `schaefer17_400()`  |
-|     500 | `schaefer7_500()`  | `schaefer17_500()`  |
-|     600 | `schaefer7_600()`  | `schaefer17_600()`  |
-|     700 | `schaefer7_700()`  | `schaefer17_700()`  |
-|     800 | `schaefer7_800()`  | `schaefer17_800()`  |
-|     900 | `schaefer7_900()`  | `schaefer17_900()`  |
-|    1000 | `schaefer7_1000()` | `schaefer17_1000()` |
-
-### schaefer7_100
+You can install this package from [GitHub](https://github.com/) with:
 
 ``` r
+# install.packages("pak")
+pak::pak("ggsegverse/ggsegSchaefer")
+```
+
+## Schaefer 7-network (400 parcels)
+
+``` r
+library(ggseg)
 library(ggsegSchaefer)
-plot(schaefer7_100())
+library(ggplot2)
+
+ggplot() +
+  geom_brain(
+    atlas = schaefer7_400(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = schaefer7_400()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-<img src="man/figures/README-schaefer7_100-1.png" alt="" width="100%" />
+<img src="man/figures/README-schaefer7-400-1.png"
+style="width:100.0%" />
 
-### schaefer7_1000
+## Schaefer 17-network (400 parcels)
 
 ``` r
-plot(schaefer7_1000())
+ggplot() +
+  geom_brain(
+    atlas = schaefer17_400(),
+    mapping = aes(fill = label),
+    position = position_brain(hemi ~ view),
+    show.legend = FALSE
+  ) +
+  scale_fill_manual(values = schaefer17_400()$palette, na.value = "grey") +
+  theme_void()
 ```
 
-<img src="man/figures/README-schaefer7_1000-1.png" alt="" width="100%" />
+<img src="man/figures/README-schaefer17-400-1.png"
+style="width:100.0%" />
 
-### schaefer17_100
+## Data source
 
-``` r
-plot(schaefer17_100())
-```
-
-<img src="man/figures/README-schaefer17_100-1.png" alt="" width="100%" />
-
-### schaefer17_1000
-
-``` r
-plot(schaefer17_1000())
-```
-
-<img src="man/figures/README-schaefer17_1000-1.png" alt="" width="100%" />
-\## Data source
-
-Annotation files from
-[ThomasYeoLab/CBIG](https://github.com/ThomasYeoLab/CBIG) (fsaverage,
-resampled to fsaverage5).
-
-- **Reference**: Schaefer et al. (2018)
-  [doi:10.1093/cercor/bhx179](https://doi.org/10.1093/cercor/bhx179)
-- **Date obtained**: 2020-03-27
+Schaefer A, Kong R, Gordon EM, Laumann TO, Zuo XN, Holmes AJ, Eickhoff
+SB, & Yeo BTT (2018). Local-global parcellation of the human cerebral
+cortex from intrinsic functional connectivity MRI. *Cerebral Cortex*,
+28(9), 3095-3114.
