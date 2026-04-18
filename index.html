@@ -67,127 +67,66 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="ggsegschaefer">ggsegSchaefer<a class="anchor" aria-label="anchor" href="#ggsegschaefer"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="ggsegschaefer-">ggsegSchaefer <a class="anchor" aria-label="anchor" href="#ggsegschaefer-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p>Schaefer Atlas for the ggsegverse Ecosystem.</p>
+<p>This package contains the Schaefer cortical atlas for the ggseg ecosystem. Includes both the 7-network and 17-network parcellations at resolutions from 100 to 1000 parcels.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
+<p>We recommend installing the ggseg-atlases through the ggseg <a href="https://ggseg.r-universe.dev/ui#builds" class="external-link">r-universe</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># From r-universe</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggsegSchaefer"</span>, repos <span class="op">=</span> <span class="st">"https://ggsegverse.r-universe.dev"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>  ggseg <span class="op">=</span> <span class="st">"https://ggseg.r-universe.dev"</span>,</span>
+<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
+<span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># From GitHub</span></span>
-<span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ggsegverse/ggsegSchaefer"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggsegSchaefer"</span><span class="op">)</span></span></code></pre></div>
+<p>You can install this package from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"ggsegverse/ggsegSchaefer"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="atlases">Atlases<a class="anchor" aria-label="anchor" href="#atlases"></a>
+<h2 id="schaefer-7-network-400-parcels">Schaefer 7-network (400 parcels)<a class="anchor" aria-label="anchor" href="#schaefer-7-network-400-parcels"></a>
 </h2>
-<p>Local-global parcellation of the human cerebral cortex (Schaefer et al., 2018) in 7-network and 17-network variants at 10 resolutions.</p>
-<div class="section level3">
-<h3 id="available-variants">Available variants<a class="anchor" aria-label="anchor" href="#available-variants"></a>
-</h3>
-<table class="table">
-<thead><tr class="header">
-<th align="right">Parcels</th>
-<th align="left">7 Networks</th>
-<th align="left">17 Networks</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="right">100</td>
-<td align="left"><code><a href="reference/schaefer7_100.html">schaefer7_100()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_100.html">schaefer17_100()</a></code></td>
-</tr>
-<tr class="even">
-<td align="right">200</td>
-<td align="left"><code><a href="reference/schaefer7_200.html">schaefer7_200()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_200.html">schaefer17_200()</a></code></td>
-</tr>
-<tr class="odd">
-<td align="right">300</td>
-<td align="left"><code><a href="reference/schaefer7_300.html">schaefer7_300()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_300.html">schaefer17_300()</a></code></td>
-</tr>
-<tr class="even">
-<td align="right">400</td>
-<td align="left"><code><a href="reference/schaefer7_400.html">schaefer7_400()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_400.html">schaefer17_400()</a></code></td>
-</tr>
-<tr class="odd">
-<td align="right">500</td>
-<td align="left"><code><a href="reference/schaefer7_500.html">schaefer7_500()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_500.html">schaefer17_500()</a></code></td>
-</tr>
-<tr class="even">
-<td align="right">600</td>
-<td align="left"><code><a href="reference/schaefer7_600.html">schaefer7_600()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_600.html">schaefer17_600()</a></code></td>
-</tr>
-<tr class="odd">
-<td align="right">700</td>
-<td align="left"><code><a href="reference/schaefer7_700.html">schaefer7_700()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_700.html">schaefer17_700()</a></code></td>
-</tr>
-<tr class="even">
-<td align="right">800</td>
-<td align="left"><code><a href="reference/schaefer7_800.html">schaefer7_800()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_800.html">schaefer17_800()</a></code></td>
-</tr>
-<tr class="odd">
-<td align="right">900</td>
-<td align="left"><code><a href="reference/schaefer7_900.html">schaefer7_900()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_900.html">schaefer17_900()</a></code></td>
-</tr>
-<tr class="even">
-<td align="right">1000</td>
-<td align="left"><code><a href="reference/schaefer7_1000.html">schaefer7_1000()</a></code></td>
-<td align="left"><code><a href="reference/schaefer17_1000.html">schaefer17_1000()</a></code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section level3">
-<h3 id="schaefer7_100">schaefer7_100<a class="anchor" aria-label="anchor" href="#schaefer7_100"></a>
-</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggsegverse/ggsegSchaefer" class="external-link">ggsegSchaefer</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/schaefer7_100.html">schaefer7_100</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-schaefer7_100-1.png" alt="" width="100%"></p>
-</div>
-<div class="section level3">
-<h3 id="schaefer7_1000">schaefer7_1000<a class="anchor" aria-label="anchor" href="#schaefer7_1000"></a>
-</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/schaefer7_1000.html">schaefer7_1000</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-schaefer7_1000-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggsegverse.github.io/ggseg/" class="external-link">ggseg</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggsegverse/ggsegSchaefer" class="external-link">ggsegSchaefer</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu"><a href="reference/schaefer7_400.html">schaefer7_400</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    position <span class="op">=</span> <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/position_brain.html" class="external-link">position_brain</a></span><span class="op">(</span><span class="va">hemi</span> <span class="op">~</span> <span class="va">view</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="reference/schaefer7_400.html">schaefer7_400</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">palette</span>, na.value <span class="op">=</span> <span class="st">"grey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-schaefer7-400-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="schaefer17_100">schaefer17_100<a class="anchor" aria-label="anchor" href="#schaefer17_100"></a>
-</h3>
+<div class="section level2">
+<h2 id="schaefer-17-network-400-parcels">Schaefer 17-network (400 parcels)<a class="anchor" aria-label="anchor" href="#schaefer-17-network-400-parcels"></a>
+</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/schaefer17_100.html">schaefer17_100</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-schaefer17_100-1.png" alt="" width="100%"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/ggbrain.html" class="external-link">geom_brain</a></span><span class="op">(</span></span>
+<span>    atlas <span class="op">=</span> <span class="fu"><a href="reference/schaefer17_400.html">schaefer17_400</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    mapping <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">label</span><span class="op">)</span>,</span>
+<span>    position <span class="op">=</span> <span class="fu"><a href="https://ggsegverse.github.io/ggseg/reference/position_brain.html" class="external-link">position_brain</a></span><span class="op">(</span><span class="va">hemi</span> <span class="op">~</span> <span class="va">view</span><span class="op">)</span>,</span>
+<span>    show.legend <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html" class="external-link">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="reference/schaefer17_400.html">schaefer17_400</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">palette</span>, na.value <span class="op">=</span> <span class="st">"grey"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="reference/figures/README-schaefer17-400-1.png" style="width:100.0%"></p>
 </div>
-<div class="section level3">
-<h3 id="schaefer17_1000">schaefer17_1000<a class="anchor" aria-label="anchor" href="#schaefer17_1000"></a>
-</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="fu"><a href="reference/schaefer17_1000.html">schaefer17_1000</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-schaefer17_1000-1.png" alt="" width="100%"> ## Data source</p>
-<p>Annotation files from <a href="https://github.com/ThomasYeoLab/CBIG" class="external-link">ThomasYeoLab/CBIG</a> (fsaverage, resampled to fsaverage5).</p>
-<ul>
-<li>
-<strong>Reference</strong>: Schaefer et al. (2018) <a href="https://doi.org/10.1093/cercor/bhx179" class="external-link">doi:10.1093/cercor/bhx179</a>
-</li>
-<li>
-<strong>Date obtained</strong>: 2020-03-27</li>
-</ul>
-</div>
+<div class="section level2">
+<h2 id="data-source">Data source<a class="anchor" aria-label="anchor" href="#data-source"></a>
+</h2>
+<p>Schaefer A, Kong R, Gordon EM, Laumann TO, Zuo XN, Holmes AJ, Eickhoff SB, &amp; Yeo BTT (2018). Local-global parcellation of the human cerebral cortex from intrinsic functional connectivity MRI. <em>Cerebral Cortex</em>, 28(9), 3095-3114.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -233,7 +172,7 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://ggsegverse.r-universe.dev/ggsegSchaefer" class="external-link"><img src="https://ggsegverse.r-universe.dev/badges/ggsegSchaefer" alt="r-universe"></a></li>
+<li><a href="https://ggseg.r-universe.dev/ggsegSchaefer" class="external-link"><img src="https://ggseg.r-universe.dev/badges/ggsegSchaefer.png" alt="r-universe"></a></li>
 </ul>
 </div>
 
