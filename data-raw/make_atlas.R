@@ -63,7 +63,8 @@ for (net in networks) {
 
     src_files <- here::here(
       "data-raw",
-      c(paste0("lh.", annot_name, ".annot"), paste0("rh.", annot_name, ".annot"))
+      c(paste0("lh.", annot_name, ".annot"),
+        paste0("rh.", annot_name, ".annot"))
     )
 
     if (!all(file.exists(src_files))) next
@@ -71,7 +72,8 @@ for (net in networks) {
     file.copy(src_files, local_label, overwrite = FALSE)
 
     for (hemi in c("lh", "rh")) {
-      out_file <- file.path(resample_dir, paste0(hemi, ".", annot_name, ".annot"))
+      out_file <- file.path(
+        resample_dir, paste0(hemi, ".", annot_name, ".annot"))
       if (file.exists(out_file)) next
       mri_surf2surf_rereg(
         subject = "fsaverage",
@@ -97,7 +99,8 @@ for (net in networks) {
 
     annot_files <- file.path(
       resample_dir,
-      c(paste0("lh.", annot_name, ".annot"), paste0("rh.", annot_name, ".annot"))
+      c(paste0("lh.", annot_name, ".annot"),
+        paste0("rh.", annot_name, ".annot"))
     )
 
     if (!all(file.exists(annot_files))) next

@@ -10,3 +10,4 @@ pkgdown
 docs
 ^.*\.zip$
 ^README\.qmd$
+^codemeta\.json$
