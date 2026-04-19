@@ -1,5 +1,11 @@
-atlas_names_7 <- paste0("schaefer7_", c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000))
-atlas_names_17 <- paste0("schaefer17_", c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000))
+atlas_names_7 <- paste0(
+  "schaefer7_",
+  c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000)
+)
+atlas_names_17 <- paste0(
+  "schaefer17_",
+  c(100, 200, 300, 400, 500, 600, 700, 800, 900, 1000)
+)
 
 for (nm in c(atlas_names_7, atlas_names_17)) {
   atlas <- do.call(nm, list())
