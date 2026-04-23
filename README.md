@@ -40,17 +40,8 @@ pak::pak("ggsegverse/ggsegSchaefer")
 ``` r
 library(ggseg)
 library(ggsegSchaefer)
-library(ggplot2)
 
-ggplot() +
-  geom_brain(
-    atlas = schaefer7_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer7_400()$palette, na.value = "grey") +
-  theme_void()
+plot(schaefer7_400())
 ```
 
 <img src="man/figures/README-schaefer7-400-1.png"
@@ -59,15 +50,7 @@ style="width:100.0%" />
 ## Schaefer 17-network (400 parcels)
 
 ``` r
-ggplot() +
-  geom_brain(
-    atlas = schaefer17_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer17_400()$palette, na.value = "grey") +
-  theme_void()
+plot(schaefer17_400())
 ```
 
 <img src="man/figures/README-schaefer17-400-1.png"

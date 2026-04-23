@@ -56,6 +56,7 @@ pak::pak("ggsegverse/ggsegSchaefer")
 ```{r}
 #| label: schaefer7-400
 library(ggseg)
+library(ggsegSchaefer)
 
 plot(schaefer7_400())
 ```
