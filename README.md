@@ -1,85 +1,60 @@
 
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ggsegSchaefer
+# ggsegSchaefer <img src="man/figures/logo.png" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions/workflows/R-CMD-check.yaml)
-[![r-universe](https://ggsegverse.r-universe.dev/badges/ggsegSchaefer)](https://ggsegverse.r-universe.dev/ggsegSchaefer)
+[![R-CMD-check](https://github.com/ggsegverse/ggsegSchaefer/workflows/R-CMD-check/badge.svg)](https://github.com/ggsegverse/ggsegSchaefer/actions)
+[![DOI](https://zenodo.org/badge/250276444.svg)](https://zenodo.org/badge/latestdoi/250276444)
+[![r-universe](https://ggseg.r-universe.dev/badges/ggsegSchaefer.png)](https://ggsegverse.github.io/ggsegSchaefer/)
 <!-- badges: end -->
 
-Schaefer Atlas for the ggsegverse Ecosystem.
+This package contains the Schaefer cortical atlas (version 0.17.1) for
+the ggseg ecosystem. Includes both the 7-network and 17-network
+parcellations at resolutions from 100 to 1000 parcels.
 
 ## Installation
 
-``` r
-# From r-universe
-install.packages("ggsegSchaefer", repos = "https://ggsegverse.r-universe.dev")
+You can install ggsegSchaefer from [GitHub](https://github.com/) with:
 
-# From GitHub
+``` r
 # install.packages("remotes")
 remotes::install_github("ggsegverse/ggsegSchaefer")
 ```
 
-## Atlases
-
-Local-global parcellation of the human cerebral cortex (Schaefer et al.,
-2018) in 7-network and 17-network variants at 10 resolutions.
-
-### Available variants
-
-| Parcels | 7 Networks         | 17 Networks         |
-|--------:|:-------------------|:--------------------|
-|     100 | `schaefer7_100()`  | `schaefer17_100()`  |
-|     200 | `schaefer7_200()`  | `schaefer17_200()`  |
-|     300 | `schaefer7_300()`  | `schaefer17_300()`  |
-|     400 | `schaefer7_400()`  | `schaefer17_400()`  |
-|     500 | `schaefer7_500()`  | `schaefer17_500()`  |
-|     600 | `schaefer7_600()`  | `schaefer17_600()`  |
-|     700 | `schaefer7_700()`  | `schaefer17_700()`  |
-|     800 | `schaefer7_800()`  | `schaefer17_800()`  |
-|     900 | `schaefer7_900()`  | `schaefer17_900()`  |
-|    1000 | `schaefer7_1000()` | `schaefer17_1000()` |
-
-### schaefer7_100
+## Example
 
 ``` r
 library(ggsegSchaefer)
-plot(schaefer7_100())
+library(ggseg)
 ```
 
-<img src="man/figures/README-schaefer7_100-1.png" alt="" width="100%" />
-
-### schaefer7_1000
+### 2D atlas
 
 ``` r
-plot(schaefer7_1000())
+plot(schaefer7_400())
 ```
 
-<img src="man/figures/README-schaefer7_1000-1.png" alt="" width="100%" />
-
-### schaefer17_100
+<img src="man/figures/README-schaefer7-2d-1.png" style="width:100.0%" />
 
 ``` r
-plot(schaefer17_100())
+plot(schaefer17_400())
 ```
 
-<img src="man/figures/README-schaefer17_100-1.png" alt="" width="100%" />
+<img src="man/figures/README-schaefer17-2d-1.png"
+style="width:100.0%" />
 
-### schaefer17_1000
+### 3D atlas
 
 ``` r
-plot(schaefer17_1000())
+library(ggseg3d)
+
+ggseg3d(atlas = schaefer7_400()) |>
+  pan_camera("right lateral")
 ```
 
-<img src="man/figures/README-schaefer17_1000-1.png" alt="" width="100%" />
-\## Data source
-
-Annotation files from
-[ThomasYeoLab/CBIG](https://github.com/ThomasYeoLab/CBIG) (fsaverage,
-resampled to fsaverage5).
-
-- **Reference**: Schaefer et al. (2018)
-  [doi:10.1093/cercor/bhx179](https://doi.org/10.1093/cercor/bhx179)
-- **Date obtained**: 2020-03-27
+Please note that the ‘ggsegSchaefer’ project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to
+this project, you agree to abide by its terms.

@@ -43,37 +43,18 @@ remotes::install_github("ggsegverse/ggsegSchaefer")
 #| label: chunk-2
 library(ggsegSchaefer)
 library(ggseg)
-library(ggplot2)
 ```
 
 ### 2D atlas
 
 ```{r}
 #| label: schaefer7-2d
-ggplot() +
-  geom_brain(
-    atlas = schaefer7_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer7_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 7-Network 400-Parcel Atlas")
+plot(schaefer7_400())
 ```
 
 ```{r}
 #| label: schaefer17-2d
-ggplot() +
-  geom_brain(
-    atlas = schaefer17_400(),
-    mapping = aes(fill = label),
-    position = position_brain(hemi ~ view),
-    show.legend = FALSE
-  ) +
-  scale_fill_manual(values = schaefer17_400()$palette, na.value = "grey") +
-  theme_void() +
-  ggtitle("Schaefer 17-Network 400-Parcel Atlas")
+plot(schaefer17_400())
 ```
 
 ### 3D atlas
