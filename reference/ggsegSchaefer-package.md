@@ -1,4 +1,4 @@
-# ggsegSchaefer: Schaefer Atlas for the 'ggseg' Ecosystem
+# ggsegSchaefer: Schaefer Atlas for the 'ggsegverse' Ecosystem
 
 Schaefer cortical atlas for the 'ggseg' ecosystem. Provides unified
 'ggseg_atlas' objects with both 2D polygon geometry and 3D vertex
