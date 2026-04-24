@@ -4,7 +4,7 @@
 \name{ggsegSchaefer-package}
 \alias{ggsegSchaefer}
 \alias{ggsegSchaefer-package}
-\title{ggsegSchaefer: Schaefer Atlas for the 'ggseg' Ecosystem}
+\title{ggsegSchaefer: Schaefer Atlas for the 'ggsegverse' Ecosystem}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 

@@ -18,6 +18,7 @@ Contains both 2D polygon geometry for \code{\link[ggseg:ggbrain]{ggseg::geom_bra
 }
 \examples{
 schaefer7_200()
+\dontrun{plot(schaefer7_200())}
 }
 \references{
 Schaefer A, et al. (2018). "Local-Global Parcellation of the
@@ -46,5 +47,27 @@ Other ggseg_atlases:
 \code{\link{schaefer7_700}()},
 \code{\link{schaefer7_800}()},
 \code{\link{schaefer7_900}()}
+
+Other cortical_atlases: 
+\code{\link{schaefer17_100}()},
+\code{\link{schaefer17_1000}()},
+\code{\link{schaefer17_200}()},
+\code{\link{schaefer17_300}()},
+\code{\link{schaefer17_400}()},
+\code{\link{schaefer17_500}()},
+\code{\link{schaefer17_600}()},
+\code{\link{schaefer17_700}()},
+\code{\link{schaefer17_800}()},
+\code{\link{schaefer17_900}()},
+\code{\link{schaefer7_100}()},
+\code{\link{schaefer7_1000}()},
+\code{\link{schaefer7_300}()},
+\code{\link{schaefer7_400}()},
+\code{\link{schaefer7_500}()},
+\code{\link{schaefer7_600}()},
+\code{\link{schaefer7_700}()},
+\code{\link{schaefer7_800}()},
+\code{\link{schaefer7_900}()}
 }
+\concept{cortical_atlases}
 \concept{ggseg_atlases}
