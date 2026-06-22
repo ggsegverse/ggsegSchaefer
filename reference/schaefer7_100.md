@@ -79,113 +79,22 @@ schaefer7_100()
 #> Type: cortical
 #> Regions: 100
 #> Hemispheres: left, right
-#> Views: inferior, lateral, medial, superior
+#> Views: inferior, lateral, superior, medial
 #> Palette: ✔
 #> Rendering: ✔ ggseg
 #> ✔ ggseg3d (vertices)
 #> ────────────────────────────────────────────────────────────────────────────────
-#> # A tibble: 100 × 3
-#>     hemi  region                                label                           
-#>     <chr> <chr>                                 <chr>                           
-#>   1 left  7Networks_LH_Vis_1                    lh_7Networks_LH_Vis_1           
-#>   2 left  7Networks_LH_Vis_2                    lh_7Networks_LH_Vis_2           
-#>   3 left  7Networks_LH_Vis_3                    lh_7Networks_LH_Vis_3           
-#>   4 left  7Networks_LH_Vis_4                    lh_7Networks_LH_Vis_4           
-#>   5 left  7Networks_LH_Vis_5                    lh_7Networks_LH_Vis_5           
-#>   6 left  7Networks_LH_Vis_6                    lh_7Networks_LH_Vis_6           
-#>   7 left  7Networks_LH_Vis_7                    lh_7Networks_LH_Vis_7           
-#>   8 left  7Networks_LH_Vis_8                    lh_7Networks_LH_Vis_8           
-#>   9 left  7Networks_LH_Vis_9                    lh_7Networks_LH_Vis_9           
-#>  10 left  7Networks_LH_SomMot_1                 lh_7Networks_LH_SomMot_1        
-#>  11 left  7Networks_LH_SomMot_2                 lh_7Networks_LH_SomMot_2        
-#>  12 left  7Networks_LH_SomMot_3                 lh_7Networks_LH_SomMot_3        
-#>  13 left  7Networks_LH_SomMot_4                 lh_7Networks_LH_SomMot_4        
-#>  14 left  7Networks_LH_SomMot_5                 lh_7Networks_LH_SomMot_5        
-#>  15 left  7Networks_LH_SomMot_6                 lh_7Networks_LH_SomMot_6        
-#>  16 left  7Networks_LH_DorsAttn_Post_1          lh_7Networks_LH_DorsAttn_Post_1 
-#>  17 left  7Networks_LH_DorsAttn_Post_2          lh_7Networks_LH_DorsAttn_Post_2 
-#>  18 left  7Networks_LH_DorsAttn_Post_3          lh_7Networks_LH_DorsAttn_Post_3 
-#>  19 left  7Networks_LH_DorsAttn_Post_4          lh_7Networks_LH_DorsAttn_Post_4 
-#>  20 left  7Networks_LH_DorsAttn_Post_5          lh_7Networks_LH_DorsAttn_Post_5 
-#>  21 left  7Networks_LH_DorsAttn_Post_6          lh_7Networks_LH_DorsAttn_Post_6 
-#>  22 left  7Networks_LH_DorsAttn_PrCv_1          lh_7Networks_LH_DorsAttn_PrCv_1 
-#>  23 left  7Networks_LH_DorsAttn_FEF_1           lh_7Networks_LH_DorsAttn_FEF_1  
-#>  24 left  7Networks_LH_SalVentAttn_ParOper_1    lh_7Networks_LH_SalVentAttn_Par…
-#>  25 left  7Networks_LH_SalVentAttn_FrOperIns_1  lh_7Networks_LH_SalVentAttn_FrO…
-#>  26 left  7Networks_LH_SalVentAttn_FrOperIns_2  lh_7Networks_LH_SalVentAttn_FrO…
-#>  27 left  7Networks_LH_SalVentAttn_PFCl_1       lh_7Networks_LH_SalVentAttn_PFC…
-#>  28 left  7Networks_LH_SalVentAttn_Med_1        lh_7Networks_LH_SalVentAttn_Med…
-#>  29 left  7Networks_LH_SalVentAttn_Med_2        lh_7Networks_LH_SalVentAttn_Med…
-#>  30 left  7Networks_LH_SalVentAttn_Med_3        lh_7Networks_LH_SalVentAttn_Med…
-#>  31 left  7Networks_LH_Limbic_OFC_1             lh_7Networks_LH_Limbic_OFC_1    
-#>  32 left  7Networks_LH_Limbic_TempPole_1        lh_7Networks_LH_Limbic_TempPole…
-#>  33 left  7Networks_LH_Limbic_TempPole_2        lh_7Networks_LH_Limbic_TempPole…
-#>  34 left  7Networks_LH_Cont_Par_1               lh_7Networks_LH_Cont_Par_1      
-#>  35 left  7Networks_LH_Cont_PFCl_1              lh_7Networks_LH_Cont_PFCl_1     
-#>  36 left  7Networks_LH_Cont_pCun_1              lh_7Networks_LH_Cont_pCun_1     
-#>  37 left  7Networks_LH_Cont_Cing_1              lh_7Networks_LH_Cont_Cing_1     
-#>  38 left  7Networks_LH_Default_Temp_1           lh_7Networks_LH_Default_Temp_1  
-#>  39 left  7Networks_LH_Default_Temp_2           lh_7Networks_LH_Default_Temp_2  
-#>  40 left  7Networks_LH_Default_Par_1            lh_7Networks_LH_Default_Par_1   
-#>  41 left  7Networks_LH_Default_Par_2            lh_7Networks_LH_Default_Par_2   
-#>  42 left  7Networks_LH_Default_PFC_1            lh_7Networks_LH_Default_PFC_1   
-#>  43 left  7Networks_LH_Default_PFC_2            lh_7Networks_LH_Default_PFC_2   
-#>  44 left  7Networks_LH_Default_PFC_3            lh_7Networks_LH_Default_PFC_3   
-#>  45 left  7Networks_LH_Default_PFC_4            lh_7Networks_LH_Default_PFC_4   
-#>  46 left  7Networks_LH_Default_PFC_5            lh_7Networks_LH_Default_PFC_5   
-#>  47 left  7Networks_LH_Default_PFC_6            lh_7Networks_LH_Default_PFC_6   
-#>  48 left  7Networks_LH_Default_PFC_7            lh_7Networks_LH_Default_PFC_7   
-#>  49 left  7Networks_LH_Default_pCunPCC_1        lh_7Networks_LH_Default_pCunPCC…
-#>  50 left  7Networks_LH_Default_pCunPCC_2        lh_7Networks_LH_Default_pCunPCC…
-#>  51 right 7Networks_RH_Vis_1                    rh_7Networks_RH_Vis_1           
-#>  52 right 7Networks_RH_Vis_2                    rh_7Networks_RH_Vis_2           
-#>  53 right 7Networks_RH_Vis_3                    rh_7Networks_RH_Vis_3           
-#>  54 right 7Networks_RH_Vis_4                    rh_7Networks_RH_Vis_4           
-#>  55 right 7Networks_RH_Vis_5                    rh_7Networks_RH_Vis_5           
-#>  56 right 7Networks_RH_Vis_6                    rh_7Networks_RH_Vis_6           
-#>  57 right 7Networks_RH_Vis_7                    rh_7Networks_RH_Vis_7           
-#>  58 right 7Networks_RH_Vis_8                    rh_7Networks_RH_Vis_8           
-#>  59 right 7Networks_RH_SomMot_1                 rh_7Networks_RH_SomMot_1        
-#>  60 right 7Networks_RH_SomMot_2                 rh_7Networks_RH_SomMot_2        
-#>  61 right 7Networks_RH_SomMot_3                 rh_7Networks_RH_SomMot_3        
-#>  62 right 7Networks_RH_SomMot_4                 rh_7Networks_RH_SomMot_4        
-#>  63 right 7Networks_RH_SomMot_5                 rh_7Networks_RH_SomMot_5        
-#>  64 right 7Networks_RH_SomMot_6                 rh_7Networks_RH_SomMot_6        
-#>  65 right 7Networks_RH_SomMot_7                 rh_7Networks_RH_SomMot_7        
-#>  66 right 7Networks_RH_SomMot_8                 rh_7Networks_RH_SomMot_8        
-#>  67 right 7Networks_RH_DorsAttn_Post_1          rh_7Networks_RH_DorsAttn_Post_1 
-#>  68 right 7Networks_RH_DorsAttn_Post_2          rh_7Networks_RH_DorsAttn_Post_2 
-#>  69 right 7Networks_RH_DorsAttn_Post_3          rh_7Networks_RH_DorsAttn_Post_3 
-#>  70 right 7Networks_RH_DorsAttn_Post_4          rh_7Networks_RH_DorsAttn_Post_4 
-#>  71 right 7Networks_RH_DorsAttn_Post_5          rh_7Networks_RH_DorsAttn_Post_5 
-#>  72 right 7Networks_RH_DorsAttn_PrCv_1          rh_7Networks_RH_DorsAttn_PrCv_1 
-#>  73 right 7Networks_RH_DorsAttn_FEF_1           rh_7Networks_RH_DorsAttn_FEF_1  
-#>  74 right 7Networks_RH_SalVentAttn_TempOccPar_1 rh_7Networks_RH_SalVentAttn_Tem…
-#>  75 right 7Networks_RH_SalVentAttn_TempOccPar_2 rh_7Networks_RH_SalVentAttn_Tem…
-#>  76 right 7Networks_RH_SalVentAttn_FrOperIns_1  rh_7Networks_RH_SalVentAttn_FrO…
-#>  77 right 7Networks_RH_SalVentAttn_Med_1        rh_7Networks_RH_SalVentAttn_Med…
-#>  78 right 7Networks_RH_SalVentAttn_Med_2        rh_7Networks_RH_SalVentAttn_Med…
-#>  79 right 7Networks_RH_Limbic_OFC_1             rh_7Networks_RH_Limbic_OFC_1    
-#>  80 right 7Networks_RH_Limbic_TempPole_1        rh_7Networks_RH_Limbic_TempPole…
-#>  81 right 7Networks_RH_Cont_Par_1               rh_7Networks_RH_Cont_Par_1      
-#>  82 right 7Networks_RH_Cont_Par_2               rh_7Networks_RH_Cont_Par_2      
-#>  83 right 7Networks_RH_Cont_PFCl_1              rh_7Networks_RH_Cont_PFCl_1     
-#>  84 right 7Networks_RH_Cont_PFCl_2              rh_7Networks_RH_Cont_PFCl_2     
-#>  85 right 7Networks_RH_Cont_PFCl_3              rh_7Networks_RH_Cont_PFCl_3     
-#>  86 right 7Networks_RH_Cont_PFCl_4              rh_7Networks_RH_Cont_PFCl_4     
-#>  87 right 7Networks_RH_Cont_Cing_1              rh_7Networks_RH_Cont_Cing_1     
-#>  88 right 7Networks_RH_Cont_PFCmp_1             rh_7Networks_RH_Cont_PFCmp_1    
-#>  89 right 7Networks_RH_Cont_pCun_1              rh_7Networks_RH_Cont_pCun_1     
-#>  90 right 7Networks_RH_Default_Par_1            rh_7Networks_RH_Default_Par_1   
-#>  91 right 7Networks_RH_Default_Temp_1           rh_7Networks_RH_Default_Temp_1  
-#>  92 right 7Networks_RH_Default_Temp_2           rh_7Networks_RH_Default_Temp_2  
-#>  93 right 7Networks_RH_Default_Temp_3           rh_7Networks_RH_Default_Temp_3  
-#>  94 right 7Networks_RH_Default_PFCv_1           rh_7Networks_RH_Default_PFCv_1  
-#>  95 right 7Networks_RH_Default_PFCv_2           rh_7Networks_RH_Default_PFCv_2  
-#>  96 right 7Networks_RH_Default_PFCdPFCm_1       rh_7Networks_RH_Default_PFCdPFC…
-#>  97 right 7Networks_RH_Default_PFCdPFCm_2       rh_7Networks_RH_Default_PFCdPFC…
-#>  98 right 7Networks_RH_Default_PFCdPFCm_3       rh_7Networks_RH_Default_PFCdPFC…
-#>  99 right 7Networks_RH_Default_pCunPCC_1        rh_7Networks_RH_Default_pCunPCC…
-#> 100 right 7Networks_RH_Default_pCunPCC_2        rh_7Networks_RH_Default_pCunPCC…
+#>    hemi                region                    label
+#> 1  left    7Networks_LH_Vis_1    lh_7Networks_LH_Vis_1
+#> 2  left    7Networks_LH_Vis_2    lh_7Networks_LH_Vis_2
+#> 3  left    7Networks_LH_Vis_3    lh_7Networks_LH_Vis_3
+#> 4  left    7Networks_LH_Vis_4    lh_7Networks_LH_Vis_4
+#> 5  left    7Networks_LH_Vis_5    lh_7Networks_LH_Vis_5
+#> 6  left    7Networks_LH_Vis_6    lh_7Networks_LH_Vis_6
+#> 7  left    7Networks_LH_Vis_7    lh_7Networks_LH_Vis_7
+#> 8  left    7Networks_LH_Vis_8    lh_7Networks_LH_Vis_8
+#> 9  left    7Networks_LH_Vis_9    lh_7Networks_LH_Vis_9
+#> 10 left 7Networks_LH_SomMot_1 lh_7Networks_LH_SomMot_1
+#> ... with 90 more rows
 if (FALSE) plot(schaefer7_100()) # \dontrun{}
 ```
