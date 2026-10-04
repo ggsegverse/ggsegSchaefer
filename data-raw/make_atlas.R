@@ -109,7 +109,6 @@ for (net in networks) {
       input_annot = annot_files,
       atlas_name = atlas_name,
       output_dir = file.path("data-raw", atlas_name),
-      tolerance = 0,
       skip_existing = TRUE,
       cleanup = FALSE
     ) |>
